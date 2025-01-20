@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Watch Party</title>
+    <title>Teleparty - Watch Together</title>
     <style>
         body {
             margin: 0;
@@ -32,36 +32,33 @@
             color: #ff006a;
         }
         .hero {
-            position: relative;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 50px 20px;
         }
-        .hero video {
+        .hero .video-container {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .hero .video-container video {
             width: 100%;
-            max-height: 500px;
-            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
-        .hero .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .hero .content {
+            flex: 1;
+            padding: 20px;
         }
-        .hero .overlay h2 {
+        .hero .content h2 {
             font-size: 2rem;
             margin-bottom: 10px;
         }
-        .hero .overlay p {
+        .hero .content p {
             font-size: 1rem;
             margin-bottom: 20px;
         }
-        .hero .overlay button {
+        .hero .content button {
             background-color: #ff006a;
             border: none;
             padding: 10px 20px;
@@ -70,12 +67,12 @@
             cursor: pointer;
             border-radius: 5px;
         }
-        .hero .overlay button:hover {
+        .hero .content button:hover {
             background-color: #e6005c;
         }
         .partners {
-            padding: 50px 20px;
             text-align: center;
+            padding: 50px 20px;
         }
         .partners img {
             max-width: 120px;
@@ -85,19 +82,6 @@
         }
         .partners img:hover {
             filter: grayscale(0);
-        }
-        .features {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: #222;
-        }
-        .features h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-        .features p {
-            font-size: 1rem;
-            line-height: 1.6;
         }
         footer {
             background-color: #000;
@@ -110,28 +94,32 @@
 <body>
 
 <header>
-    <h1>Anime Party</h1>
+    <h1>Teleparty</h1>
     <nav>
-        <a href="#">Home</a>
-        <a href="#features">Features</a>
-        <a href="#partners">Partners</a>
+        <a href="#">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#support">Support</a>
+        <a href="#premium">Go Premium</a>
     </nav>
 </header>
 
 <section class="hero">
-    <video autoplay muted loop>
-        <source src="https://example.com/anime-clips.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="overlay">
-        <h2>A New Way to Watch Anime Together</h2>
-        <p>Sync playback and chat with friends while enjoying your favorite anime.</p>
-        <button>Get Started for Free</button>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="https://example.com/anime-clips.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="content">
+        <h2>A New Way to Watch TV Together</h2>
+        <p>Teleparty synchronizes video playback and adds group chat to Netflix, Disney Plus, Hulu, HBO Max, and Amazon Prime.</p>
+        <button>Get Teleparty for Free!</button>
+        <p style="font-size: 0.9rem; color: #ccc;">*Available on Chrome, Edge, Firefox, & Safari Browsers</p>
     </div>
 </section>
 
 <section class="partners">
-    <h2>Watch on Your Favorite Platforms</h2>
+    <h2>Host a Watch Party on</h2>
     <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_N_logo.svg" alt="Netflix">
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/YouTube_icon_%282013-2017%29.svg" alt="YouTube">
     <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+">
@@ -140,14 +128,10 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Amazon_Prime_Video_logo.svg" alt="Amazon Prime">
 </section>
 
-<section class="features" id="features">
-    <h3>Watch Anime with Friends</h3>
-    <p>Create watch parties and stream millions of shows and movies with synchronized playback and chat. From Naruto to Demon Slayer, never miss a moment!</p>
-</section>
-
 <footer>
-    &copy; 2025 Anime Party. All rights reserved.
+    &copy; 2025 Teleparty. All rights reserved.
 </footer>
 
 </body>
 </html>
+
