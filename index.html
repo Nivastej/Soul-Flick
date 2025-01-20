@@ -1,66 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Room</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles/lobby.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Watch Party</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+        }
+        header {
+            background-color: #000;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 1.5rem;
+            color: #ff006a;
+        }
+        header nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        header nav a:hover {
+            color: #ff006a;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero video {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+        }
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero .overlay h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .hero .overlay p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        .hero .overlay button {
+            background-color: #ff006a;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hero .overlay button:hover {
+            background-color: #e6005c;
+        }
+        .partners {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .partners img {
+            max-width: 120px;
+            margin: 20px;
+            filter: grayscale(1);
+            transition: filter 0.3s;
+        }
+        .partners img:hover {
+            filter: grayscale(0);
+        }
+        .features {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #222;
+        }
+        .features h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .features p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
-    <header id="nav">
-       <div class="nav--list">
-            <a href="index.html"/>
-                <h3 id="logo">
-                    <img src="./images/logo2.jpg" alt="Site Logo">
-                    <span>Watch Party</span>
-                </h3>
-            </a>
-       </div>
+<header>
+    <h1>Anime Party</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#partners">Partners</a>
+    </nav>
+</header>
 
-        <div id="nav__links">
-            <a class="nav__link" href="/">
-                Lobby
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ede0e0" viewBox="0 0 24 24"><path d="M20 7.093v-5.093h-3v2.093l3 3zm4 5.907l-12-12-12 12h3v10h7v-5h4v5h7v-10h3zm-5 8h-3v-5h-8v5h-3v-10.26l7-6.912 7 6.99v10.182z"/></svg>
-            </a>
-            <a class="nav__link" id="create__room__btn" href="index.html">
-                Create Room
-               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ede0e0" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"/></svg>
-            </a>
-        </div>
-    </header>
+<section class="hero">
+    <video autoplay muted loop>
+        <source src="https://example.com/anime-clips.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+        <h2>A New Way to Watch Anime Together</h2>
+        <p>Sync playback and chat with friends while enjoying your favorite anime.</p>
+        <button>Get Started for Free</button>
+    </div>
+</section>
 
-    <main id="room__lobby__container">
-        
-        <div id="form__container">
-             <div id="form__container__header">
-                 <p>👋 Create or Join Room</p>
-             </div>
- 
- 
-            <form id="lobby__form">
- 
-                 <div class="form__field__wrapper">
-                     <label>Your Name</label>
-                     <input type="text" name="name" required placeholder="Enter your display name..." />
-                 </div>
- 
-                 <div class="form__field__wrapper">
-                     <label>Room Name</label>
-                     <input type="text" name="room"  placeholder="Enter room name..." />
-                 </div>
- 
-                 <div class="form__field__wrapper">
-                     <button type="submit">Go to Room 
-                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
-                    </button>
-                 </div>
-            </form>
-        </div>
-     </main>
-    
+<section class="partners">
+    <h2>Watch on Your Favorite Platforms</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_N_logo.svg" alt="Netflix">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/YouTube_icon_%282013-2017%29.svg" alt="YouTube">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/HBO_Max_Logo.svg" alt="HBO Max">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Hulu_Logo.svg" alt="Hulu">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Amazon_Prime_Video_logo.svg" alt="Amazon Prime">
+</section>
+
+<section class="features" id="features">
+    <h3>Watch Anime with Friends</h3>
+    <p>Create watch parties and stream millions of shows and movies with synchronized playback and chat. From Naruto to Demon Slayer, never miss a moment!</p>
+</section>
+
+<footer>
+    &copy; 2025 Anime Party. All rights reserved.
+</footer>
+
 </body>
-<script type="text/javascript" src="js/lobby.js"></script>
 </html>
