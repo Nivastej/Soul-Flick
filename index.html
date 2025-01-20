@@ -90,13 +90,62 @@
             padding: 20px;
             font-size: 0.9rem;
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.2rem;
+            }
+            header nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            header nav a {
+                margin: 10px 0;
+            }
+            .hero {
+                flex-direction: column;
+                padding: 30px 10px;
+            }
+            .hero .video-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .hero .content h2 {
+                font-size: 1.5rem;
+            }
+            .hero .content p {
+                font-size: 0.9rem;
+            }
+            .partners img {
+                max-width: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero .content h2 {
+                font-size: 1.2rem;
+            }
+            .hero .content p {
+                font-size: 0.8rem;
+            }
+            .partners img {
+                max-width: 80px;
+            }
+        }
+        
+    footer img.footer-img {
+        width: 50px; /* Adjust the size as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-left: 10px; /* Optional, for spacing */
+    }
     </style>
 </head>
 <body>
 
 <header>
-  
-      <h1> Soul Flick </h1>  
+    <h1> Soul Flick </h1>  
     <nav>
         <a href="#">Features</a>
         <a href="#how-it-works">How It Works</a>
@@ -115,7 +164,10 @@
     <div class="content">
         <h2>A New Way to Watch TV Together</h2>
         <p>Soulflick synchronizes video playback and adds group chat to Netflix, Disney Plus, Hulu, HBO Max, and Amazon Prime.</p>
-        <button>Get Soulflick for Free!</button>
+       <a href="interface.html">
+    <button>Get Soulflick Here </button>
+</a>
+
         <p style="font-size: 0.9rem; color: #ccc;">*Available on Chrome, Edge, Firefox, & Safari Browsers</p>
         <p> Ammathodu theatrical experience estam </p>
     </div>
@@ -133,9 +185,9 @@
 
 <footer>
     &copy; 2025 Soulflick. All rights reserved.
+    <img src="title.png" alt="Soulflick Logo" class="footer-img">
 </footer>
+
 
 </body>
 </html>
-
-
